@@ -1,0 +1,24 @@
+extend type Query {
+  unreadNotifications: [Notification!]
+}
+
+extend type Mutation {
+  postNotification(input: PostNotificationInput): Notification
+  markNotificationRead(notificationId: Int!): Boolean!
+}
+
+scalar Time
+
+type Notification {
+  id: Int!
+  userId: Int!
+  type: String!
+  content: String!
+  sentAt: Time!
+  read: Boolean!
+}
+
+input PostNotificationInput {
+  type: String!
+  content: String!
+}

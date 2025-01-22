@@ -1,0 +1,27 @@
+extend type Query {
+  getAllOrdersByUser: [Order!]
+  getOrder(orderId: Int!): Order!
+}
+
+extend type Mutation {
+  createOrder(input: CreateOrderInput): Order!
+  updateOrderStatus(input: UpdateOrderStatusInput): Boolean!
+}
+
+type Order {
+  id: Int!
+  userId: Int!
+  products: [String!]!
+  total: Float!
+  status: String!
+  createdAt: Time!
+}
+
+input CreateOrderInput {
+  products: [String!]!
+}
+
+input UpdateOrderStatusInput {
+  orderId: Int!
+  status: String!
+}

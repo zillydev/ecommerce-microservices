@@ -1,0 +1,30 @@
+extend type Query {
+  user: User
+}
+
+extend type Mutation {
+  registerUser(input: RegisterUserInput): RegisterUserResult
+  updatePreferences(input: UpdatePreferencesInput): Boolean!
+}
+
+type User {
+  id: Int!
+  name: String!
+  email: String!
+  preferredNotifications: [String!]!
+}
+
+input RegisterUserInput {
+  name: String!
+  email: String!
+  preferredNotifications: [String!]!
+}
+
+type RegisterUserResult {
+  user: User!
+  accessToken: String!
+}
+
+input UpdatePreferencesInput {
+  preferredNotifications: [String!]!
+}

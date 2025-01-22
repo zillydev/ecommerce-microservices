@@ -58,14 +58,14 @@ This project is a personalized notification system for an e-commerce platform, d
 - **GraphQL Framework**: gqlgen
 - **Cache**: Redis
 
-### Postman Collection
+## Postman Collection
 
 https://www.postman.com/blue-escape-5551/workspace/public-workspace/collection/678ff7e709d730b05b8d4e35?action=share&creator=35043396
 
 Queries marked with "JWT" require a Bearer token in Authorization header, which can be received after registering a user
 Queries marked with "Admin" require `x-api-key` in headers, which should match `ADMIN_SECRET_KEY` in Gateway service .env
 
-### Running with Docker
+## Running with Docker
 
 The entire architecture can be run with a single command
 
@@ -73,7 +73,7 @@ The entire architecture can be run with a single command
 docker-compose up
 ```
 
-### Local development
+## Local development
 
 Use the Makefile to build and run all services at once
 

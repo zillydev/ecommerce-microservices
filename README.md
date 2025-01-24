@@ -62,12 +62,13 @@ This project is a personalized notification system for an e-commerce platform, d
 
 https://www.postman.com/blue-escape-5551/workspace/public-workspace/collection/678ff7e709d730b05b8d4e35?action=share&creator=35043396
 
-Queries marked with "JWT" require a Bearer token in Authorization header, which can be received after registering a user
-Queries marked with "Admin" require `x-api-key` in headers, which should match `ADMIN_SECRET_KEY` in Gateway service .env
+Queries marked with "JWT" require a Bearer token in Authorization header, which can be received after registering a user.
+
+Queries marked with "Admin" require `x-api-key` in headers, which should match `ADMIN_SECRET_KEY` in Gateway service .env file.
 
 ## Running with Docker
 
-The entire architecture can be run with a single command
+The entire architecture can be run with a single command:
 
 ```sh
 docker-compose up
@@ -75,14 +76,14 @@ docker-compose up
 
 ## Local development
 
-Use the Makefile to build and run all services at once
+Use the Makefile to build and run all services at once:
 
 ```sh
 make build
 make run
 ```
 
-Or run an individual service
+Or run an individual service:
 
 ```sh
 go run cmd/user-service/main.go
